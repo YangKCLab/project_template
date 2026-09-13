@@ -39,6 +39,7 @@ GitHub copies only the files of a template. It does not copy branch protection, 
 
 - [ ] Replace "Project name" and the description at the top of this README.
 - [ ] Rename the package: rename `libs/project_package_name/`, and update the name in `libs/pyproject.toml` and in the root `pyproject.toml` (`dependencies` and `[tool.uv.sources]`). Also set the root project `name` and `description`.
+  - The root project `name` must differ from the package name even after treating `-` and `_` as the same character. uv normalizes both to `-`, so a root project `my-project` and a package `my_project` count as one package, and `uv sync` fails with "conflicting URLs". Add a suffix to the root name, for example `my-project-analysis`.
 - [ ] Run `uv sync` and commit the generated `uv.lock`.
 - [ ] Fill in `AGENTS.md`.
 - [ ] Protect `main` so changes go through reviewed pull requests: **Settings → Rules → Rulesets**, or **Settings → Branches** → add a rule for `main` that requires a pull request with one approval.
