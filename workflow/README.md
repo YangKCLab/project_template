@@ -1,7 +1,6 @@
 This folder stores the scripts for data processing and analysis.
 
-Although Jupyter notebooks can be interactive and convenient, they are not the best tools for everything.
-See a discussion at [Why Data Scientists Need to Move from Jupyter Notebooks to Scripts](https://www.section.io/engineering-education/why-data-scientists-need-to-move-from-jupyter-notebooks-to-scripts/).
-It is therefore recommended to convert your code into well-organized scripts for complex data processing and manipulation.
+Jupyter notebooks are interactive and convenient, but they are not the best tool for everything.
+For complex data processing and manipulation, convert your code into well-organized scripts.
 
-RhRecommended workflow tool: [Snakemake](https://snakemake.readthedocs.io/en/stable/).
+Recommended workflow tool: [Snakemake](https://snakemake.readthedocs.io/en/stable/). It is already a project dependency. Run the pipeline from the repository root with `uv run snakemake -j 1`.

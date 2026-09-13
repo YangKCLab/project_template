@@ -1,9 +1,11 @@
-For classes and functions that can be reused, please consider incorporating them into the package for the project.
+This folder holds the project's own Python package, for classes and functions that are reused across notebooks and workflow scripts.
 
-Create a package that you can install and use throughout the project. Use the editable installation by running in the present directory
+The package lives in `project_package_name/`. Rename the folder and the `name` in `libs/pyproject.toml` when you set up the project, and update the matching entries in the root `pyproject.toml`.
 
+The root `pyproject.toml` installs this package in editable mode through `[tool.uv.sources]`, so `uv sync` from the repository root is all you need. Changes to the code take effect without reinstalling. Import it anywhere in the project:
+
+```python
+from project_package_name import some_function
 ```
-pip install -e ./
-```
 
-so that you don't need to keep reinstalling the library.
+Add dependencies that the package itself needs to `libs/pyproject.toml`. Add dependencies that only notebooks or workflow scripts need to the root `pyproject.toml` with `uv add <package>`.

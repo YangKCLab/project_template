@@ -1,0 +1,23 @@
+[project]
+name = "project-name"
+version = "0.1.0"
+description = "Project description"
+requires-python = ">=3.12"
+dependencies = [
+    "project_package_name",
+    "numpy",
+    "pandas",
+    "matplotlib",
+    "seaborn",
+    "python-dotenv",
+    "snakemake",
+]
+
+[dependency-groups]
+dev = [
+    "jupyterlab",
+    "ipykernel",
+]
+
+[tool.uv.sources]
+project_package_name = { path = "libs", editable = true }

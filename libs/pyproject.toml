@@ -1,0 +1,10 @@
+[project]
+name = "project_package_name"
+version = "0.1.0"
+description = "Reusable classes and functions for the project."
+requires-python = ">=3.12"
+dependencies = []
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
