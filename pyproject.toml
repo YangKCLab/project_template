@@ -1,4 +1,6 @@
 [project]
+# Must differ from the libs/ package name, even with "-" and "_" treated as equal.
+# Example: package my_project, root project my-project-analysis.
 name = "project-name"
 version = "0.1.0"
 description = "Project description"
