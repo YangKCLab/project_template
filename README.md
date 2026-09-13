@@ -11,7 +11,6 @@ One or two sentences on what this project studies and why.
 1. `notebooks/` for dated experiment notebooks.
 1. `workflow/` for data processing and analysis scripts, ideally run through Snakemake.
 1. `AGENTS.md` for instructions to AI coding agents. `CLAUDE.md` imports it.
-1. `CONTRIBUTING.md` for how the team uses GitHub Issues, Slack, labels, and pull requests.
 1. `.gitignore` for Python, Jupyter, macOS, Snakemake, secrets, and derived data files.
 1. `.env.example` for the names of the API keys the project needs.
 
@@ -30,7 +29,7 @@ Add a dependency with `uv add <package>`. Commit both `pyproject.toml` and `uv.l
 
 ## Logistics
 
-- **Project management:** tasks live in GitHub Issues and the project's GitHub Project board. See `CONTRIBUTING.md` for labels, milestones, and when to use Issues or Slack.
+- **Project management:** tasks live in GitHub Issues and the project's GitHub Project board.
 - **Lab practices:** the [lab manual](https://github.com/YangKCLab/lab-manual) (lab members only) covers research practices, reproducibility, data sharing, and human-subjects research.
 - **Committing new code:** create a new [branch](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-branches), then open a [pull request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests). At least one reviewer signs off before a merge to `main`.
 
@@ -42,7 +41,6 @@ GitHub copies only the files of a template. It does not copy branch protection, 
 - [ ] Rename the package: rename `libs/project_package_name/`, and update the name in `libs/pyproject.toml` and in the root `pyproject.toml` (`dependencies` and `[tool.uv.sources]`). Also set the root project `name` and `description`.
 - [ ] Run `uv sync` and commit the generated `uv.lock`.
 - [ ] Fill in `AGENTS.md`.
-- [ ] Add the project's milestones to `CONTRIBUTING.md` and create them in GitHub.
 - [ ] Create the priority labels:
   ```bash
   gh label create now   --color B60205 --description "Actively being worked on or blocking progress"
